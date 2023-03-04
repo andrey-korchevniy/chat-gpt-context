@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  width: 300px;
+}
+
+input {
+  width: 230px;
+  padding-left: 20px;
+}
