@@ -2,10 +2,10 @@ form {
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
-  width: 300px;
+  width: 700px;
 }
 
 input {
-  width: 230px;
+  width: 630px;
   padding-left: 20px;
 }
