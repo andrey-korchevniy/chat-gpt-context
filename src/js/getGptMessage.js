@@ -4,7 +4,7 @@ async function getGptMessage(dataForGPT, hundleGptAnswer, temperature) {
   //* -- проверяем тело запроса на путоту --
 
   try {
-    console.log(typeof temperature);
+    console.log(process.env.REACT_APP_OPENAI_API_KEY);
     axios({
       method: 'post',
       url: 'https://api.openai.com/v1/chat/completions',
@@ -23,10 +23,10 @@ async function getGptMessage(dataForGPT, hundleGptAnswer, temperature) {
         hundleGptAnswer(response.data.choices[0].message.content)
       )
       .catch(error => {
-        console.log(error);
+        console.log(error.response.data.error.message);
       });
   } catch (error) {
-    console.error(error.response.status, error.response.data);
+    console.error(error.response.status, error.message);
   }
 }
 

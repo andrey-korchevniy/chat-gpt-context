@@ -47,6 +47,7 @@ export const App = () => {
     if (history[lastEl] && history[lastEl].role === 'user') {
       const dataForGPT =
         history.length < depth ? history : history.slice(-depth);
+      console.log(dataForGPT);
       getGptMessage(dataForGPT, hundleGptAnswer, temperature);
     }
   }, [history, temperature, depth]);
